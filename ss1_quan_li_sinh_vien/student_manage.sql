@@ -1,5 +1,5 @@
-create database quan_ly_sinh_vien;
-use quan_ly_sinh_vien;
+create database student_manage;
+use student_manage;
 create table class(
 id int primary key,
 `name` varchar(50));
@@ -12,6 +12,7 @@ id int primary key,
 age int,
 country varchar(50));
 insert into student value(1,'Huỳnh Đức Định',21,'Việt Nam');
+select * from student;
 
 create table teacher(
 id int primary key,
