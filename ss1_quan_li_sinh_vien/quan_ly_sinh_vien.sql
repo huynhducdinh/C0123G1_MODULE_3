@@ -1,23 +1,24 @@
-create database student_manage;
-use student_manage;
-create table class(
-id int primary key,
-`name` varchar(50));
-insert into class value (1,'C0123G1');
-select * from class;
+CREATE DATABASE student_manage;
+USE student_manage;
+CREATE TABLE class (
+	id INT PRIMARY KEY,
+	namese VARCHAR(50));
+INSERT class VALUES (1,'C0123G1');
+SELECT * FROM class;
 
-create table student(
-id int primary key,
-`name` varchar(50),
-age date,
-country varchar(50));
-insert into student value(1,'Huỳnh Đức Định','2002-8-9','Việt Nam');
-select * from student;
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    namese VARCHAR(50),
+    age DATE,
+    country VARCHAR(50));
+INSERT INTO student VALUES(1,'Huỳnh Đức Định','2002-8-9','Việt Nam');
+SELECT * FROM student;
 
-create table teacher(
-id int primary key,
-`name` varchar(50),
-age date,
-country varchar(50));
-insert into teacher value(1,'Nam','1997-12-20','Việt Nam');
-select * from teacher;
+CREATE TABLE TEAcHER(
+	id INT PRIMARY KEY,
+	namese VARCHAR(50),
+	AGE DATE,
+	counTRY VARCHAR(50));
+INSERT INTO TEAChER VALUES(1,'Nam','1997-12-20','Việt Nam');
+SELECT * FROM TEAChEr;
+
