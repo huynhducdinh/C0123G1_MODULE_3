@@ -14,11 +14,11 @@ CREATE TABLE student (
 INSERT INTO student VALUES(1,'Huỳnh Đức Định','2002-8-9','Việt Nam');
 SELECT * FROM student;
 
-CREATE TABLE TEAcHER(
+CREATE TABLE teacher(
 	id INT PRIMARY KEY,
 	namese VARCHAR(50),
 	AGE DATE,
 	counTRY VARCHAR(50));
-INSERT INTO TEAChER VALUES(1,'Nam','1997-12-20','Việt Nam');
-SELECT * FROM TEAChEr;
+INSERT INTO teacher VALUES(1,'Nam','1997-12-20','Việt Nam');
+SELECT * FROM teacher;
 
