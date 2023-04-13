@@ -1,14 +1,14 @@
 CREATE DATABASE furama;
 USE furama;
 CREATE TABLE vi_tri(
-	ma_vi_tri INT PRIMARY KEY,
+	ma_vi_tri INT PRIMARY KEY AUTO_INCREMENT,
 	ten_vi_tri VARCHAR(50));
 INSERT INTO vi_tri VALUES(1,'Quản Lý'),
 						(2,'Nhân Viên');
 SELECT * FROM vi_tri;
 
 CREATE TABLE trinh_do(
-	ma_trinh_do INT PRIMARY KEY,
+	ma_trinh_do INT PRIMARY KEY AUTO_INCREMENT,
 	ten_trinh_do VARCHAR(50));
 INSERT INTO trinh_do VALUES(1,'Trung Cấp'),
 						  (2,'Cao Đẳng'),
@@ -17,7 +17,7 @@ INSERT INTO trinh_do VALUES(1,'Trung Cấp'),
 SELECT * FROM trinh_do;
 
 CREATE TABLE bo_phan(
-	ma_bo_phan INT PRIMARY KEY,
+	ma_bo_phan INT PRIMARY KEY AUTO_INCREMENT,
 	ten_bo_phan VARCHAR(50));
 INSERT INTO bo_phan VALUES(1,'Sale-Marketing'),
 					     (2,'Hành Chính'),
@@ -26,7 +26,7 @@ INSERT INTO bo_phan VALUES(1,'Sale-Marketing'),
 SELECT * FROM bo_phan;
 
 CREATE TABLE nhan_vien(
-	ma_nhan_vien INT PRIMARY KEY,
+	ma_nhan_vien INT PRIMARY KEY AUTO_INCREMENT,
 	ho_ten VARCHAR(45) NOT NULL,
 	ngay_sinh DATE NOT NULL,
 	so_cmnd VARCHAR(45) NOT NULL,
@@ -50,7 +50,7 @@ INSERT INTO nhan_vien VALUES (1,'Nguyễn Văn An','1970-11-07','456231786',1000
 SELECT * FROM nhan_vien;
 
 CREATE TABLE loai_khach(
-	ma_loai_khach INT PRIMARY KEY,
+	ma_loai_khach INT PRIMARY KEY AUTO_INCREMENT,
 	ten_loai_khach VARCHAR(50));
 INSERT INTO loai_khach VALUES(1,'Diamond'),
 							(2,'Platinum'),
@@ -60,12 +60,12 @@ INSERT INTO loai_khach VALUES(1,'Diamond'),
 SELECT * FROM loai_khach;
 
 CREATE TABLE khach_hang(
-	ma_khach_hang INT PRIMARY KEY,
+	ma_khach_hang INT PRIMARY KEY AUTO_INCREMENT,
 	ho_ten VARCHAR(45) NOT NULL,
 	ngay_sinh DATE NOT NULL ,
 	gioi_tinh BIT(1) NOT NULL,
 	so_cmnd VARCHAR(45) NOT NULL,
-	so_dt VARCHAR(45) NOT NULL,
+	so_dt VARCHAR(45) NOT NULL,	
 	email VARCHAR(45),
 	dia_chi VARCHAR(45),
 	ma_loai_khach_hang INT , FOREIGN KEY (ma_loai_khach_hang) REFERENCES loai_khach(ma_loai_khach));
@@ -82,7 +82,7 @@ INSERT INTO khach_hang VALUES    (1,'Nguyễn Thị Hào','1970-11-07',0,'643431
  SELECT * FROM khach_hang;
                
 CREATE TABLE kieu_thue(
-	ma_kieu_thue INT PRIMARY KEY,
+	ma_kieu_thue INT PRIMARY KEY AUTO_INCREMENT,
 	ten_kieu_thue varchar( 50));
 INSERT INTO kieu_thue VALUES(1,'Year'),
 						   (2,'Month'),
@@ -91,7 +91,7 @@ INSERT INTO kieu_thue VALUES(1,'Year'),
 SELECT * FROM kieu_thue;
 
 CREATE TABLE loai_dich_vu(
-	ma_loai_dich_vu INT PRIMARY KEY,
+	ma_loai_dich_vu INT PRIMARY KEY AUTO_INCREMENT,
 	ten_loai_dich_vu varchar(20));
 INSERT INTO loai_dich_vu VALUES(1, 'Villa'),
 							  (2, 'House'),
@@ -99,7 +99,7 @@ INSERT INTO loai_dich_vu VALUES(1, 'Villa'),
 SELECT * FROM loai_dich_vu;
 
 CREATE TABLE dich_vu(
-	ma_dich_vu INT PRIMARY KEY,
+	ma_dich_vu INT PRIMARY KEY AUTO_INCREMENT,
 	ten_dich_vu VARCHAR(45) NOT NULL,
 	dien_tich INT,
 	chi_phi_thue DOUBLE NOT NULL,
@@ -111,7 +111,7 @@ CREATE TABLE dich_vu(
 	dien_tich_mien_phi_di_kem TEXT,
 	ma_kieu_thue INT , FOREIGN KEY(ma_kieu_thue)REFERENCES kieu_thue(ma_kieu_thue),
 	ma_loai_dich_vu INT , FOREIGN KEY (ma_loai_dich_vu) REFERENCES loai_dich_vu(ma_loai_dich_vu));
-INSERT INTO dich_vu VALUES   (1,'Villa Beach Front',25000,1000000,10,'vip','Có hồ bơi',500,4,null,3,1),
+INSERT INTO dich_vu VALUES  (1,'Villa Beach Front',25000,1000000,10,'vip','Có hồ bơi',500,4,null,3,1),
 							(2,'House Princess 01',14000,5000000,7,'vip','Có thêm bếp nướng',null,3,null,2,2),
 							(3,'Room Twin 01',5000,1000000,2,'normal','Có tivi',null,null,'1 Xe máy, 1 Xe đạp',4,3),
 							(4,'Villa No Beach Front',22000,9000000,8,'normal','Có hồ bơi',300,3,null,3,1),
@@ -121,7 +121,7 @@ INSERT INTO dich_vu VALUES   (1,'Villa Beach Front',25000,1000000,10,'vip','Có 
 SELECT * FROM dich_vu;
 
 CREATE TABLE dich_vu_di_kem(
-	ma_dich_vu_di_kem INT PRIMARY KEY,
+	ma_dich_vu_di_kem INT PRIMARY KEY AUTO_INCREMENT,
 	ten_dich_vu_di_kem VARCHAR(45) NOT NULL,
 	gia DOUBLE NOT NULL,
 	don_vi varchar(30) NOT NULL,
@@ -135,7 +135,7 @@ INSERT INTO dich_vu_di_kem VALUES(1,'Karaoke',10000,'giờ','tiện nghi, hiện
 SELECT * FROM dich_vu_di_kem;
 
 CREATE TABLE hop_dong(
-		ma_hop_dong INT PRIMARY KEY,
+		ma_hop_dong INT PRIMARY KEY AUTO_INCREMENT,
 		ngay_lam_hop_dong DATETIME NOT NULL,
 		ngay_ket_thuc_hop_dong DATETIME NOT NULL,
 		tien_dat_coc DOUBLE NOT NULL,
@@ -157,7 +157,7 @@ INSERT INTO hop_dong VALUES (1,	"2020-12-08",	"2020-12-08",	0,	3,	1,	3),
 SELECT * FROM hop_dong;
 
 CREATE TABLE hop_dong_chi_tiet(
-		ma_hop_dong_chi_tiet INT PRIMARY KEY,
+		ma_hop_dong_chi_tiet INT PRIMARY KEY AUTO_INCREMENT,
 		so_luong INT NOT NULL,
 		ma_hop_dong INT , FOREIGN KEY (ma_hop_dong) REFERENCES hop_dong(ma_hop_dong),
 		ma_dich_vu_di_kem INT , FOREIGN KEY(ma_dich_vu_di_kem) REFERENCES dich_vu_di_kem(ma_dich_vu_di_kem));

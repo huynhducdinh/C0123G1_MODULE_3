@@ -18,7 +18,7 @@ CREATE TABLE vat_tu(
     
 CREATE TABLE nha_cung_cap(
     ma_nha_cc INT PRIMARY KEY,
-    ten_nha_cc VARCHAR(100)NOT NULL,
+    ten_nha_cc VARCHAR(100),
     dia_chi VARCHAR(50)NOT NULL
     );
     
@@ -31,7 +31,7 @@ FOREIGN KEY (ma_nha_cc) REFERENCES nha_cung_cap(ma_nha_cc)
 
 CREATE TABLE chi_tiet_phieu_xuat(
 	don_gia_xuat FLOAT,
-	so_luong_xuat VARCHAR(45),
+	so_luong_xuat VARCHAR(45) NOT NULL,
     so_phieu_xuat INT,
     ma_vat_tu INT,
 PRIMARY KEY (so_phieu_xuat,ma_vat_tu),
@@ -41,7 +41,7 @@ FOREIGN KEY (ma_vat_tu) REFERENCES vat_tu(ma_vat_tu)
 
 CREATE TABLE chi_tiet_phieu_nhap(
 	don_gia_nhap FLOAT,
-	so_luong_nhap VARCHAR(45),
+	so_luong_nhap VARCHAR(45) NOT NULL,
     so_phieu_nhap INT,
     ma_vat_tu INT,
 PRIMARY KEY (so_phieu_nhap,ma_vat_tu),
@@ -50,17 +50,14 @@ FOREIGN KEY (ma_vat_tu) REFERENCES vat_tu(ma_vat_tu)
 );
 
 CREATE TABLE chi_tiet_don_dat_hang(
-	so_don_hang INT,
+	so_don_hang INT NOT NULL,
 	ma_vt INT,
+	sdt VARCHAR(10) NOT NULL,
 PRIMARY KEY (so_don_hang,ma_vt),
 FOREIGN KEY(so_don_hang)REFERENCES don_dat_hang(so_don_hang),
 FOREIGN KEY(ma_vt)REFERENCES vat_tu(ma_vat_tu)
 );
 
-CREATE TABLE sdt(
-	sdt VARCHAR(10)NOT NULL,
-	ma_nha_cc INT, FOREIGN KEY(ma_nha_cc)REFERENCES nha_cung_cap(ma_nha_cc)
-);
 DROP DATABASE chuyen_doi_erd_sang_quan_he;
 
     
