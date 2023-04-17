@@ -48,7 +48,6 @@ INSERT INTO nhan_vien VALUES (1,'Nguyễn Văn An','1970-11-07','456231786',1000
 							(9,'Tòng Hoang','1982-09-03','256781231',6000000,'0245144444','hoangtong@gmail.com','213 Hàm Nghi, Đà Nẵng',2,4,4),
 							(10,'Nguyễn Công Đạo','1994-01-08','755434343',8000000,	'0988767111','nguyencongdao12@gmail.com','6 Hoà Khánh, Đồng Nai',2,3,2);
 SELECT * FROM nhan_vien;
-
 CREATE TABLE loai_khach(
 	ma_loai_khach INT PRIMARY KEY AUTO_INCREMENT,
 	ten_loai_khach VARCHAR(50));

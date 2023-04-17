@@ -7,17 +7,12 @@ SELECT * FROM furama.hop_dong;
 SELECT d.ma_dich_vu, d.ten_dich_vu,d.dien_tich,d.chi_phi_thue,ldv.ten_loai_dich_vu AS HH
 FROM dich_vu AS d
 INNER JOIN loai_dich_vu AS ldv ON d.ma_loai_dich_vu=ldv.ma_loai_dich_vu
-INNER JOIN hop_dong AS h ON d.ma_dich_vu=h.ma_dich_vu
 WHERE d.ma_dich_vu NOT IN(
 SELECT h.ma_dich_vu
 FROM hop_dong AS h
 WHERE (YEAR(h.ngay_lam_hop_dong) IN (2021)) AND (MONTH(h.ngay_lam_hop_dong) IN (1,2,3)) )
 GROUP BY ma_dich_vu
 ORDER BY ten_dich_vu ;
-
-
-
-
 
 -- tack 7
 SELECT d.ma_dich_vu, d.ten_dich_vu,d.dien_tich,d.chi_phi_thue,ldv.ten_loai_dich_vu AS HH
