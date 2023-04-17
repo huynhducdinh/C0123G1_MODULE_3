@@ -62,5 +62,16 @@ HAVING COUNT(*)=1 -- Kiểm tra trong tất cả tên_dịch_vụ_đi_kèm cái 
 );
  
 -- tack 15
-
-SELECT 
+SELECT 	nv.ma_nhan_vien,
+nv.ho_ten,
+td.ma_trinh_do,
+bp.ten_bo_phan,
+nv.so_dien_thoai,
+nv.dia_chi
+FROM nhan_vien nv 
+INNER JOIN hop_dong hd ON nv.ma_nhan_vien=hd.ma_nhan_vien
+INNER JOIN trinh_do td ON td.ma_trinh_do=nv.ma_trinh_do
+INNER JOIN bo_phan bp ON bp.ma_bo_phan= nv.ma_bo_phan
+WHERE YEAR(hd.ngay_lam_hop_dong ) BETWEEN 2020 AND 2021 
+GROUP BY hd.ma_nhan_vien
+HAVING COUNT(hd.ma_nhan_vien)<=3;
