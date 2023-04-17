@@ -7,20 +7,23 @@ SELECT * FROM quan_ly_sinh_vien.subjects;
 
 SELECT sb.*,sb.credit
 FROM subjects sb
-WHERE sb.credit=( SELECT MAX(credit) FROM subjects);
+WHERE sb.credit IN
+( SELECT MAX(credit) FROM subjects);
 
 -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
 
 SELECT sb.*,m.mark AS max_mark
 FROM subjects AS sb
-JOIN mark AS m ON sb.sub_id=m.sub_id
-WHERE m.mark=(SELECT MAX(mark) FROM mark);
+INNER JOIN mark m ON sb.sub_id=m.sub_id
+WHERE m.mark IN (
+SELECT MAX(mark) 
+FROM mark);
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
 
 SELECT s.*, AVG(m.mark) AS diem_trung_binh
 FROM student AS s
-JOIN mark AS m ON s.student_id=m.student_id
+JOIN mark  m ON s.student_id=m.student_id
 GROUP BY s.student_id
 ORDER BY diem_trung_binh DESC;
 

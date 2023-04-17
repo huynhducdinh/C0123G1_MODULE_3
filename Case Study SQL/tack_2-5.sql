@@ -1,4 +1,4 @@
-USE furama;
+		USE furama;
 -- tack 2
 SELECT *  FROM nhan_vien
  WHERE ho_ten REGEXP '^[HTK]'AND CHAR_LENGTH(ho_ten) <= 15;

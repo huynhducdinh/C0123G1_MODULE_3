@@ -161,13 +161,14 @@ CREATE TABLE hop_dong_chi_tiet(
 		so_luong INT NOT NULL,
 		ma_hop_dong INT , FOREIGN KEY (ma_hop_dong) REFERENCES hop_dong(ma_hop_dong),
 		ma_dich_vu_di_kem INT , FOREIGN KEY(ma_dich_vu_di_kem) REFERENCES dich_vu_di_kem(ma_dich_vu_di_kem));
-INSERT INTO hop_dong_chi_tiet VALUES (1,5,2,4),
-									(2,8,3,5),
-									(3,7,2,6),
-									(4,1,3,1),
-									(5,12,3,2),
-									(6,3,1,2),
-									(7,2,12,2);
+INSERT INTO hop_dong_chi_tiet VALUES    (1,5,2,4),
+										(2,8,2,5),
+										(3,15,2,6),
+										(4,1,3,1),
+										(5,11,3,2),
+										(6,1,1,3),
+										(7,2,1,2),
+										(8,2,12,2);
 SELECT * FROM hop_dong_chi_tiet;
-
-                            
+DROP DATABASE furama;
+					
