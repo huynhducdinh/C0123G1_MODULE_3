@@ -13,13 +13,14 @@ WHERE ((lk.ten_loai_khach ='Diamond') AND((kh.dia_chi LIKE '%Vinh') OR (kh.dia_c
 SELECT * FROM furama.dich_vu_di_kem;
 SELECT * FROM furama.hop_dong_chi_tiet;
 SELECT * FROM furama.hop_dong;
+
 SELECT  hd.ma_hop_dong, 
 		nv.ho_ten AS ho_ten_nhan_vien,
 		kh.ho_ten AS ho_ten_khach_hang,
 		kh.so_dt AS sdt_khach_hang,
 		dv.ma_dich_vu, dv.ten_dich_vu,
         SUM(IFNULL(hdct.so_luong,0)) AS so_luong_dich_vu_di_kem,
-       hd.tien_dat_coc 
+        hd.tien_dat_coc 
 FROM  hop_dong hd
 LEFT JOIN nhan_vien nv ON hd.ma_nhan_vien=nv.ma_nhan_vien
 LEFT JOIN khach_hang kh ON kh.ma_khach_hang=hd.ma_khach_hang
@@ -31,8 +32,8 @@ GROUP BY hd.ma_hop_dong;
 
 -- tack 13
 SELECT * FROM furama.hop_dong_chi_tiet;
-SELECT dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem,
-SUM(IFNULL(hdct.so_luong,0)) AS so_luong_dich_vu_di_kem
+SELECT  dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem,
+		SUM(IFNULL(hdct.so_luong,0)) AS so_luong_dich_vu_di_kem
 FROM dich_vu_di_kem dvdk
 LEFT JOIN hop_dong_chi_tiet hdct ON dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
 GROUP BY dvdk.ma_dich_vu_di_kem
@@ -42,17 +43,17 @@ LIMIT 2;
 
 -- tack 14
 SELECT  hd.ma_hop_dong,
-ldv.ten_loai_dich_vu, 
-dvdk.ten_dich_vu_di_kem,
-COUNT(hdct.ma_dich_vu_di_kem) AS so_lan_su_dung
+		ldv.ten_loai_dich_vu, 
+		dvdk.ten_dich_vu_di_kem,
+		COUNT(hdct.ma_dich_vu_di_kem) AS so_lan_su_dung
 FROM hop_dong  hd
-INNER JOIN dich_vu  dv ON hd.ma_dich_vu = dv.ma_dich_vu
+INNER JOIN dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu
 INNER JOIN loai_dich_vu  ldv ON dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
 INNER JOIN hop_dong_chi_tiet hdct ON hd.ma_hop_dong = hdct.ma_hop_dong
 INNER JOIN dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
-GROUP BY hd.ma_hop_dong,
-ldv.ten_loai_dich_vu, 
-dvdk.ten_dich_vu_di_kem
+GROUP BY    hd.ma_hop_dong,
+			ldv.ten_loai_dich_vu, 
+			dvdk.ten_dich_vu_di_kem
 HAVING dvdk.ten_dich_vu_di_kem IN ( -- Kiểm tra dk đếm số lần xuất hiện.
 SELECT dvdk.ten_dich_vu_di_kem, hdct.ma_dich_vu_di_kem
  FROM hop_dong_chi_tiet hdct
@@ -63,11 +64,11 @@ HAVING COUNT(*)=1 -- Kiểm tra trong tất cả tên_dịch_vụ_đi_kèm cái 
  
 -- tack 15
 SELECT 	nv.ma_nhan_vien,
-nv.ho_ten,
-td.ma_trinh_do,
-bp.ten_bo_phan,
-nv.so_dien_thoai,
-nv.dia_chi
+		nv.ho_ten,
+		td.ma_trinh_do,
+		bp.ten_bo_phan,
+		nv.so_dien_thoai,
+		nv.dia_chi
 FROM nhan_vien nv 
 INNER JOIN hop_dong hd ON nv.ma_nhan_vien=hd.ma_nhan_vien
 INNER JOIN trinh_do td ON td.ma_trinh_do=nv.ma_trinh_do
