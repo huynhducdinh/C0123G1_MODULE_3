@@ -38,7 +38,7 @@ SELECT * FROM nhan_vien;
     FROM v_khach_hang);
     
 -- tack 18 
-SET FOREIGN_KEY_CHECKS = 0;
+SET FOREIGN_KEY_CHECKS = 0;-- chỉ định có hay không kiểm tra các ràng buộc khóa ngoại đối với các bảng
 DELETE FROM khach_hang AS kh
 WHERE kh.ma_khach_hang IN (
 SELECT hd.ma_khach_hang
@@ -60,4 +60,4 @@ SET SQL_SAFE_UPDATES=1;
 -- tack 20
  SELECT  nv.ma_nhan_vien AS id , nv.ho_ten,nv.email,nv.ngay_sinh,nv.so_dien_thoai,nv.email FROM nhan_vien AS nv
  UNION ALL
- SELECT kh.ma_khach_hang AS d , kh.ho_ten,kh.email,kh.ngay_sinh,kh.so_dt,kh.email FROM khach_hang AS kh;
+ SELECT kh.ma_khach_hang AS id , kh.ho_ten,kh.email,kh.ngay_sinh,kh.so_dt,kh.email FROM khach_hang AS kh;

@@ -12,16 +12,16 @@ WHERE sb.credit IN
 
 -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
 
-SELECT sb.*,m.mark AS max_mark
+SELECT sb.*,m.poin AS max_poin
 FROM subjects AS sb
 INNER JOIN mark m ON sb.sub_id=m.sub_id
-WHERE m.mark IN (
-SELECT MAX(mark) 
-FROM mark);
+WHERE m.poin IN (
+SELECT MAX(m.poin) 
+FROM mark m);
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
 
-SELECT s.*, AVG(m.mark) AS diem_trung_binh
+SELECT s.*, AVG (m.poin) AS diem_trung_binh
 FROM student AS s
 JOIN mark  m ON s.student_id=m.student_id
 GROUP BY s.student_id

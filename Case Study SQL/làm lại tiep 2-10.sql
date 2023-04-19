@@ -51,15 +51,15 @@
     
     -- tack 7
     
-    SELECT dv.ma_dich_vu,dv.ten_dich_vu, dv.dien_tich, dv.so_nguoi_toi_da,dv.chi_phi_thue,ldv.ten_loai_dich_vu
+    SELECT DISTINCT dv.ma_dich_vu,dv.ten_dich_vu, dv.dien_tich, dv.so_nguoi_toi_da,dv.chi_phi_thue,ldv.ten_loai_dich_vu
     FROM dich_vu AS dv
     LEFT JOIN loai_dich_vu AS ldv ON  ldv.ma_loai_dich_vu=dv.ma_loai_dich_vu
     LEFT JOIN hop_dong AS hd ON dv.ma_dich_vu=hd.ma_dich_vu
     WHERE (YEAR(hd.ngay_lam_hop_dong)=2020)AND hd.ma_hop_dong NOT IN (
     SELECT hd.ma_dich_vu
     FROM hop_dong AS hd
-    WHERE (YEAR(hd.ngay_lam_hop_dong )=2021))
-    GROUP BY ma_dich_vu;
+    WHERE (YEAR(hd.ngay_lam_hop_dong )=2021));
+
     
     -- tach 8
     
