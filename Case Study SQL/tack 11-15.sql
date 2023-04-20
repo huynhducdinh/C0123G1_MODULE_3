@@ -37,11 +37,14 @@ SELECT  dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem,
 FROM dich_vu_di_kem dvdk
 LEFT JOIN hop_dong_chi_tiet hdct ON dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
 GROUP BY dvdk.ma_dich_vu_di_kem
-HAVING so_luong_dich_vu_di_kem = SUM(hdct.so_luong)
+HAVING so_luong_dich_vu_di_kem = (SELECT(sum(hdct.so_luong)) AS so_luong_dich_vu_di_kem FROM dich_vu_di_kem AS dvdk
+LEFT JOIN hop_dong_chi_tiet hdct ON dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
+GROUP BY dvdk.ma_dich_vu_di_kem
 ORDER BY so_luong_dich_vu_di_kem DESC
-LIMIT 2;
+LIMIT 1);
 
 -- tack 14
+
 SELECT  hd.ma_hop_dong,
 		ldv.ten_loai_dich_vu, 
 		dvdk.ten_dich_vu_di_kem,

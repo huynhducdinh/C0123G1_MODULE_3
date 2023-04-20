@@ -52,10 +52,10 @@ CREATE TABLE mark(
 UNIQUE(sub_id,student_id),
 FOREIGN KEY (sub_id) REFERENCES subjects (sub_id),
 FOREIGN KEY (student_id) REFERENCES student(student_id),
-	mark INT CHECK(mark > 0 AND mark < 100),
+	poin INT CHECK(poin > 0 AND poin < 100),
 	exam_times INT NOT NULL
 );
-INSERT INTO mark(sub_id,student_id,mark,exam_times)
+INSERT INTO mark(sub_id,student_id,poin,exam_times)
 VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);
@@ -80,10 +80,10 @@ WHERE start_date LIKE '%-12-%';
 SET SQL_SAFE_UPDATES =1;
 
 -- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
-SELECT student.student_name,subjects.sub_name,mark.mark
+SELECT student.student_name,subjects.sub_name,mark.poin
 FROM mark
 JOIN student ON student.student_id=mark.student_id
 JOIN subjects ON subjects.sub_id=mark.sub_id
-ORDER BY mark DESC;
+ORDER BY poin DESC;
 
 DROP DATABASE quan_ly_sinh_vien;

@@ -22,13 +22,14 @@ SELECT * FROM nhan_vien;
 
 -- tack 17
   CREATE VIEW v_khach_hang AS
+  
   SELECT kh.ma_khach_hang,kh.ho_ten,lk.ma_loai_khach,
     IFNULL((SUM(IFNULL((hdct.so_luong * dvdk.gia),0)) + dv.chi_phi_thue),0) AS tong_tien
     FROM khach_hang AS kh
 	LEFT JOIN loai_khach AS lk ON lk.ma_loai_khach=kh.ma_loai_khach_hang
 	LEFT JOIN hop_dong AS hd ON kh.ma_khach_hang=hd.ma_khach_hang
 	LEFT JOIN dich_vu AS dv ON dv.ma_dich_vu =hd.ma_dich_vu
-	LEFT JOIN hop_dong_chi_tiet hdct ON 	hd.ma_hop_dong=hdct.ma_hop_dong
+	LEFT JOIN hop_dong_chi_tiet hdct ON hd.ma_hop_dong=hdct.ma_hop_dong
 	LEFT JOIN dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
     WHERE (YEAR(hd.ngay_lam_hop_dong)=2021) AND (lk.ten_loai_khach)= 'Platinum'
     GROUP BY ma_khach_hang

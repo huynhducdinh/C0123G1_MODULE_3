@@ -1,0 +1,29 @@
+/*background-image: linear-gradient(0,màu,màu)*: chuyển màu tuyên tính */
+.wed{
+    height: 120px;
+    background-image: linear-gradient(0,#FF6666,#FF3333);
+}
+/*sẽ cho phép các item điều chỉnh kích thước phần tử tự động*/
+/*justify-content: space-between: dùm cho 2 cái cách xa ra nhau*/
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+/*làm cho cùng trên 1 hàng*/
+.header__navbar--list{
+    display: inline-block;
+    padding-left: 0;
+}
+/*list-style: làm mất dấu chấm*/
+.header__navbar--item{
+    list-style: none;
+    display: inline-block;
+}
+/*text-decoration: mất dấu gạch chân*/
+.header__navbar--item--link{
+    text-decoration: none;
+}.grid{
+    width: 1450px;
+    max-width: 100%;
+    margin: 0 auto;
+ }
