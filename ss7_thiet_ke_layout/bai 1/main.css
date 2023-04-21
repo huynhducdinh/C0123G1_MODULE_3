@@ -1,0 +1,131 @@
+* {
+    margin: 1px;
+    box-sizing: border-box;
+
+}
+/*tạo*/
+.row__lcr {
+    display: flex;
+}
+
+.header {
+    height: 70px;
+    background-color:#FFCCCC;
+
+}
+
+/*cho chữ lên 1 dòng và between */
+.header__nav {
+    font-family: Arial;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*cách chữ ra*/
+.header__nav--item {
+    margin: 10px;
+    position: relative;
+}
+
+.header__nav--item {
+    margin-top: 15px;
+}
+
+/*cách khảng cách hai đầu*/
+.girl {
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*làm mất dấu chấm
+mất gạch chân
+chỉnh font chữ*/
+.header__nav--item,
+.header__nav--item--link {
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+/*làm mờ chữ khi di chuột vào*/
+.header__nav--item:hover,
+.header__nav--item--link:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.row__lcr--left {
+    padding-left: 50px;
+    background-color: #FFCCFF;
+}
+
+/*làm mất dấu chấm và mất gạch chân*/
+.row__lcr--left--item,
+.row__lcr--left--link {
+    list-style: none;
+    text-decoration: none;
+   margin-top: 10px;
+}
+/*canh khoảng cách giữ hai dòng với nhau*/
+.row__lcr--left--link {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.row__lcr--right {
+    background-color: #FFCCFF ;
+}
+
+.row__lcr--content {
+    background-color: #FFFFFF;
+    font-size: 20px;
+    height: 100%;
+
+}
+.row__lcr--footer {
+    font-size: 30px;
+    height: 40px;
+    background-color: #FFCCFF;
+    text-align: center;
+}
+.row__lcr--right--item,
+.row__lcr--right--btn {
+    list-style: none;
+}
+/*chiều dài của nội dung*/
+.row__lcr--content{
+    height: 630px;
+}
+/*khoảng cách giữa hai nội dung với nhau*/
+.row__lcr--content--item{
+    height: 50%;
+}
+/*thẻ button làm rộng  và dài khung ra .bo tròn đường khung chỉnh cỡ chữ */
+.row__lcr--right--btn{
+    margin-top: 50px;
+    line-height: 20px;
+    min-width: 160px;
+    height: 60px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.0rem;
+    padding: 0 8px;
+    outline: none;
+    cursor: pointer;
+    background-color:#FFCCCC;
+}
+.row__lcr--content--item{
+    margin-left: 20px;
+    text-indent: 20px;
+}
+.header__nav--item--search{
+    border-radius: 5px;
+}
+.header__nav--item--link{
+    height: 35px;
+}
+

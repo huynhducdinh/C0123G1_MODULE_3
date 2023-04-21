@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.header__nav {
+    background-image: linear-gradient(#FFCC66,#FFCC99);
+    font-family:"Book Antiqua"
+}
+.header__nav--item{
+    background-color: #FF9999;
+    border-radius: 10px;
+    font-style:italic;
+}
+.header__nav2 {
+    background-color: #FFCC99;
+    text-align: center;
+}
+
+.header__nav2--item {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    font-size: 20px;
+}
+
+.header__navbar--item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid black;
+    height: 20px;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.row__lc {
+    display: flex;
+}
+
+.left__nav--item--img,
+.left__nav--item--link--img {
+    font-size: 20px;
+    list-style: none;
+    line-height: 40px;
+    margin-left: -15px;
+    width: 480px;
+    height: 230px;
+    margin-top: 5px;
+}
+
+.left__nav--item--img1,
+.left__nav--item--link--img1 {
+    font-size: 20px;
+    list-style: none;
+    line-height: 40px;
+    margin-left: -15px;
+    width: 480px;
+    height: 230px;
+    margin-top: 30px;
+}
+
+.left__nav--item-word,
+.left__nav--item-word--size-l {
+    font-family: Arial;
+    margin-left: -15px;
+    margin-top: -20px;
+
+}
+
+.left__nav--item-word--size {
+    font-size: 13px;
+    color: #888888;
+    text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.left__nav--item-word--size-lx {
+    font-size: 17px;
+    margin-top: -20px;
+    color: #888888;
+    text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.left__nav--item-video,
+.left__nav--item-video--size-lx {
+    font-family: Arial;
+    margin-top: 1px;
+    margin-left: -467pt;
+    text-align: center;
+}
+
+.left__nav--item-video--size {
+    font-size: 13px;
+    color: #888888;
+    text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.left__nav--item-video--size-lx,
+.left__nav--item-video--size-l {
+    font-size: 17px;
+    margin-top: 3pt;
+    margin-left: -420px;
+    color: #888888;
+    text-shadow: rgba(0, 0, 0, 0.5);
+
+}
+
+.content {
+    background-color: #FFCCFF;
+    height: 620px;
+}
+
+.content__nav--item {
+    font-size: 20px;
+    list-style: none;
+}
+
+.content__nav--item--video {
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.content__nav--item--word,
+.content__nav--item {
+    margin-top: 9px;
+    text-indent: 15px;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.footer {
+    background-color: #FF9966;
+    height: 50px;
+}
+
+.footer__item--word,
+.footer__item {
+    text-align: center;
+    font-size: 20px;
+   padding-top: 7px;
+}
+
+
+
+
+
+
