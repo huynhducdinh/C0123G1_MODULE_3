@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.header {
+    background-color: blue;
+}
+.header__nav--list{
+    display: flex;
+    justify-content: space-between;
+}
+.header__nav--list--item,
+.header__nav--list--login{
+    display: flex;
+
+}
+.article {
+    background-color: coral;
+}
+
+.section {
+    background-color: blueviolet;
+}
+
+.aside {
+    background-color: palegreen;
+}
+
+.footer {
+    background-color: palevioletred;
+}
+
+.article__section {
+    display: flex;
+}

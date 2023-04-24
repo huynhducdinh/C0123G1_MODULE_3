@@ -5,16 +5,16 @@
 
 
 .header__nav {
-    background-image: linear-gradient(#FFCC66,#FFCC99);
+    background-image: linear-gradient(#DDDDDD,#CCCCCC);
     font-family:"Book Antiqua"
 }
 .header__nav--item{
-    background-color: #FF9999;
+    background-color: #FFCCFF;
     border-radius: 10px;
     font-style:italic;
 }
 .header__nav2 {
-    background-color: #FFCC99;
+    background-color: #DDDDDD;
     text-align: center;
 }
 
@@ -38,6 +38,7 @@
 
 .row__lc {
     display: flex;
+    background-color: #EEEEEE;
 }
 
 .left__nav--item--img,
@@ -67,19 +68,20 @@
     font-family: Arial;
     margin-left: -15px;
     margin-top: -20px;
-
 }
 
-.left__nav--item-word--size {
+
+.left__nav--item-word--size,
+.left__nav--item-word--size-l{
     font-size: 13px;
-    color: #888888;
+    color: #333333;
     text-shadow: rgba(0, 0, 0, 0.5);
 }
 
 .left__nav--item-word--size-lx {
     font-size: 17px;
     margin-top: -20px;
-    color: #888888;
+    color: #EEEEEE;
     text-shadow: rgba(0, 0, 0, 0.5);
 }
 
@@ -93,7 +95,7 @@
 
 .left__nav--item-video--size {
     font-size: 13px;
-    color: #888888;
+    color: #333333;
     text-shadow: rgba(0, 0, 0, 0.5);
 }
 
@@ -102,13 +104,13 @@
     font-size: 17px;
     margin-top: 3pt;
     margin-left: -420px;
-    color: #888888;
+    color: #333333;
     text-shadow: rgba(0, 0, 0, 0.5);
 
 }
 
 .content {
-    background-color: #FFCCFF;
+    background-color: #EEEEEE;
     height: 620px;
 }
 
@@ -134,7 +136,7 @@
 }
 
 .footer {
-    background-color: #FF9966;
+    background-color: #DDDDDD;
     height: 50px;
 }
 

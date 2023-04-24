@@ -95,6 +95,7 @@
     padding: 0 8px;
     outline: none;
     cursor: pointer;
+
 }
 
 .btn:hover {
@@ -155,7 +156,25 @@
 .auth-form__socials--fb {
     margin-top: 25px;
 }
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__help-link{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #939393;
+}
+.auth-form__help-separate{
+    display: block;
+    border-left: 1px solid red;
+    margin: 2px 10px 0px;
+    height: 20px;
+}
+.auth-form__help-forgot{
+    color: #FF9966;
 
+}
 
 
 
