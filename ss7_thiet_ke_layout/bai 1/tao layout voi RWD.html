@@ -3,79 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="main.css">
-    <!--    <link rel="stylesheet" href="media only screen.css">-->
-    <!--    <link rel="stylesheet" href="../../bootstrap/mysql/layout.css">-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header col-l-12 col-m-12">
-    <div class="girl">
+<div class="col-l-12 col-m-12 col-s-12 header" style="position: fixed">
+    <div class="gird">
         <div class="header__nav">
-            <ul>
-                <li class="header__nav--item">
-                    <i class="fa-brands fa-reddit"></i> Logo
-                </li>
-                <li class="header__nav--item">
-                    <i class="fa-sharp fa-solid fa-house"></i> Home
-                </li>
+            <ul class="header__navbar">
+                <li class="header__nav--item">Logo</li>
+                <li class="header__nav--item">Home</li>
                 <li class="header__nav--item">About</li>
                 <li class="header__nav--item">Projects</li>
                 <li class="header__nav--item">Contact</li>
             </ul>
-            <ul>
-                <li class="header__nav--item">
-                    <a href="http://localhost:63342/ss7_thiet_ke_layout/ss6_css/%C4%91%C4%83ng%20k%C3%AD.html?_ijt=3jufjttchhatu786sh3ubj2uh3&_ij_reload=RELOAD_ON_SAVE "
-                       target="_blank" class="header__nav--item--link">
-                        <i style="color:black" class="fa-solid fa-right-to-bracket"></i> Login</a>
-                </li>
+            <ul class="header__navbar">
+                <li class="header__nav--item">Login</li>
             </ul>
         </div>
     </div>
-</header>
-    <div class="row__lcr col-l-12 col-m-12">
-        <div class="  col-l-2 col-m-12 row__lcr--left">
-            <!--            <div class="col-xl-* col-lg-* col-md-* col-* col-sm-*"></div>-->
-
-            <ul class="row__lcr--left--item">
-                <li><a href="" class="row__lcr--left--link ">Link</a></li>
-                <li><a href="" class="row__lcr--left--link">Link</a></li>
-                <li><a href="" class="row__lcr--left--link">Link</a></li>
-            </ul>
-
-        </div>
-        <div class=" col-l-8 col-m-12 row__lcr--content">
-            <!--        <div class="col-xl-* col-lg-* col-md-* col-* col-sm-*">-->
-            <div class="row__lcr-row__center--word-content--item">
-                <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="row__lcr--content--item">
-                <h1>Text</h1>
-                <p>Lorem ipsum...</p>
-            </div>
-        </div>
-        <div class="  col-l-2 col-m-12 row__lcr--right">
-            <!--        <div class="col-xl-* col-lg-* col-md-* col-* col-sm-*">-->
-            <ul class="row__lcr--right--item">
-                <li>
-                    <button class="row__lcr--right--btn">ADS</button>
-                </li>
-                <li>
-                    <button class="row__lcr--right--btn">ADS</button>
-                </li>
-            </ul>
-        </div>
+</div>
+<div class=" row">
+    <div class="col-s-12 col-m-2 col-l-2 row__left">
+        <ul class="row__left--item">
+            <li style="color: black">Link</li>
+            <li style="color: black">Link</li>
+            <li style="color: black">Link</li>
+        </ul>
     </div>
+    <div class=" col-s-12 col-m-8 col-l-8 row__center">
+        <div class="col-s-12 col-m-12 col-l-12 row__center--item">
+        <h1 style="text-indent: 20px; ">Welcome</h1>
+        <p style="padding: 10px; text-indent: 20px"> Hội An là một thành phố cổ nằm tại tỉnh Quảng Nam, Việt Nam. Đây là một điểm đến
+            du lịch nổi tiếng
+            với những ngôi nhà cổ truyền đẹp, kiến trúc hoài cổ và phong cảnh đẹp. Hội An được liệt vào danh
+            sách di sản văn hóa thế giới của UNESCO. Du khách có thể tham quan các di tích lịch sử, chùa cổ và
+            các kiến trúc độc đáo như cầu Nhật Bản, cầu Cẩm Thanh, ngôi nhà cổ Bàng, nhà cổ Phùng Hưng. Đặc
+            biệt, Hội An còn là một trung tâm ẩm thực với nhiều món ăn đặc trưng của địa phương như Cao lầu, Mì
+            Quảng, Bánh mì Phượng hay đồ uống truyền thống như Trà Quế.
+        </p>
+        <hr>
+        <h1 style="text-indent: 20px">Text</h1>
+        <p style=" text-indent: 30px">Text...</p>
+    </div>
+</div>
 
-    <footer class="col-l-12  col-m-12 row__lcr--footer">Footer Text</footer>
+<div class="col-s-12 col-m-2 col-l-2 row__right">
+    <div class="row__right--item">
+        <p class="row__right--item-ads">ADS</p>
+    </div>
+    <div class="row__right--item">
+        <p class="row__right--item-ads">ADS</p>
+    </div>
+</div>
+</div>
+<div>
+    <footer style="position:fixed" class=" col-l-12 col-m-12 col-s-12 footer">Footer Text</footer>
+</div>
 
 </body>
 </html>
