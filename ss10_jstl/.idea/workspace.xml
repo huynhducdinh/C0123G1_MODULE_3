@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ecae7441-1750-47e4-b96b-f7c0585c56ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/java/model/customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/java/servlet/HiServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/java/servlet/list_of_customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case Study QLDA/DU-AN-QUAN-LY-LINH-KIEN-PC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/java/bai_1/ProductDiscountCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/text.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2P04SwH048jf1kLU1EofTyOl3ne" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/CO123G1-MYSQL/ss10_jstl",
+    "settings.editor.selected.configurable": "application.passwordSafe",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ecae7441-1750-47e4-b96b-f7c0585c56ac" name="Changes" comment="" />
+      <created>1682580668460</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682580668460</updated>
+      <workItem from="1682580669556" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
