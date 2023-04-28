@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecae7441-1750-47e4-b96b-f7c0585c56ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/java/model/customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/java/servlet/HiServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/java/servlet/list_of_customers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss_10_jstl/bai_1/bai_1/src/main/webapp/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Case Study QLDA/DU-AN-QUAN-LY-LINH-KIEN-PC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/java/bai_1/ProductDiscountCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/result.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/text.css" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/repository/ProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/repository/impl/IProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/service/impl/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_3/bai_3/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_3/bai_3/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/CO123G1-MYSQL/ss10_jstl",
+    "last_opened_file_path": "D:/codegym/CO123G1-MYSQL/ss10_jstl/bai_3",
     "settings.editor.selected.configurable": "application.passwordSafe",
     "vue.rearranger.settings.migration": "true"
   }
@@ -61,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682580668460</updated>
       <workItem from="1682580669556" duration="38000" />
+      <workItem from="1682653939133" duration="186000" />
     </task>
     <servers />
   </component>
