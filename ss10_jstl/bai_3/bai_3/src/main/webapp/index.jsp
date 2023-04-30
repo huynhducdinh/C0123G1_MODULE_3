@@ -18,7 +18,7 @@
             <tr>
                 <td>Operator:</td>
                 <td>
-                    <<select name="operator">
+                    <select name="operator">
                     <option value="+">Addition</option>
                     <option value="-">Subtraction</option>
                     <option value="*">Multiplication</option>

@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4b782c37-d68b-4679-9dc2-54b3b3961019" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ss10_jstl/bai_2/bai_2/src/main/java/model/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss10_jstl/bai_2/bai_2/src/main/java/servlet/CalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss10_jstl/bai_2/bai_2/src/main/webapp/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_wed/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1/bai_1/src/main/java/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1/bai_1/src/main/java/servlet/ListCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1/bai_1/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1/bai_1/src/main/webapp/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Case Study QLDA/DU-AN-QUAN-LY-LINH-KIEN-PC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/java/bai_1/ProductDiscountCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/result.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_tong_quan_wed/demo/demo/src/main/webapp/text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/java/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/bai_1/bai_1/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +19,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectId" id="2OzWI1b2GGEC9QEuvb4ev60lwV6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/codegym/CO123G1-MYSQL/ss_10_jstl&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/MVC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "application.passwordSafe",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.7410" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.7410" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -145,6 +136,8 @@
       <updated>1682563807039</updated>
       <workItem from="1682563808190" duration="67000" />
       <workItem from="1682601915953" duration="58000" />
+      <workItem from="1682654374716" duration="797000" />
+      <workItem from="1682655844462" duration="45000" />
     </task>
     <servers />
   </component>
