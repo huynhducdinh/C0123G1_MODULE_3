@@ -12,7 +12,7 @@ import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
-    private IProductService iProductService = new ProductService();
+    private static IProductService iProductService = new ProductService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,21 +30,26 @@ public class ProductServlet extends HttpServlet {
                 response.sendRedirect("/product");
                 break;
             case "update":
-                List<Product> productList = iProductService.getAll();
-                int idd = Integer.parseInt(request.getParameter("id"));
-                for (int i = 0; i < productList.size(); i++) {
-                    if (idd == productList.get(i).getId()) {
-                        request.setAttribute("id", productList.get(i).getId());
-                        request.setAttribute("name", productList.get(i).getName());
-                        request.setAttribute("price", productList.get(i).getPrice());
-                        request.setAttribute("description", productList.get(i).getDescribe());
-                        request.setAttribute("producer", productList.get(i).getProducer());
-                        request.getRequestDispatcher("/update.jsp").forward(request, response);
-                    }
-                }
+                goUpdate(request, response);
                 break;
             default:
                 showList(request, response);
+                break;
+        }
+    }
+
+    private static void goUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        List<Product> productList = iProductService.getAll();
+        for (int i = 0; i < productList.size(); i++) {
+            if (id == productList.get(i).getId()) {
+                request.setAttribute("id", productList.get(i).getId());
+                request.setAttribute("name", productList.get(i).getName());
+                request.setAttribute("price", productList.get(i).getPrice());
+                request.setAttribute("describe", productList.get(i).getDescribe());
+                request.setAttribute("producer", productList.get(i).getProducer());
+                request.getRequestDispatcher("/update.jsp").forward(request, response);
+            }
         }
     }
 
@@ -76,7 +81,7 @@ public class ProductServlet extends HttpServlet {
 
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
+        Integer id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         float price = Float.parseFloat(request.getParameter("price"));
         String describe = request.getParameter("describe");
@@ -87,22 +92,14 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void updateProduct(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
+        Integer id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        double price = Double.parseDouble(request.getParameter("price"));
+        float price = Float.parseFloat(request.getParameter("price"));
         String describe = request.getParameter("describe");
         String producer = request.getParameter("producer");
-        Product product = iProductService.findById(id);
-        if (product == null) {
-            request.getRequestDispatcher("/error_404.jsp");
-        } else {
-            product.setName(name);
-            product.setPrice((float) price);
-            product.setDescribe(describe);
-            product.setProducer(producer);
-            iProductService.updateProduct(id, product);
-            request.setAttribute("product", product);
-           request.getRequestDispatcher("/update.jsp");
-        }
+        Product product = new Product(id, name, price, describe, producer);
+        iProductService.updateProduct(id, product);
+       response.sendRedirect("/product");
+
     }
 }

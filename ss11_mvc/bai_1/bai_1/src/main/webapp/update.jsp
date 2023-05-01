@@ -47,7 +47,7 @@
     <label>Giá sản phẩm</label>
     <input class="form-control" name="price" value="${price}"><br>
     <label>Mô tả sản phẩm</label>
-    <input class="form-control" name="description" value="${description}"><br>
+    <input class="form-control" name="describe" value="${describe}"><br>
     <label>Nhà sản xuất</label>
     <input class="form-control" name="producer" value="${producer}"><br>
     <button class="btn btn-success" type="submit">Update</button>
