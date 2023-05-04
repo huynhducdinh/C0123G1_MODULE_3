@@ -6,7 +6,6 @@
 </head>
 <body>
 
-
 <br/>
 <a href="/user">Chạm vào đây</a>
 </body>

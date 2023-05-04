@@ -1,17 +1,17 @@
-package service;
+package repository;
 
 import model.User;
 
 import java.util.List;
 
-public interface IUserService {
+public interface IUserRepo {
     List<User> getAll();
 
-    void saveUser(User user);
+    boolean save(User user);
 
     void update(int id, User user);
 
-    List<User> search(String country);
+    List<User> search(String countrySearch);
 
     List<User> sortByName();
 }

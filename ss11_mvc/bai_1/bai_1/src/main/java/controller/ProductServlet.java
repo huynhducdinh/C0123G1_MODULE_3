@@ -35,7 +35,6 @@ public class ProductServlet extends HttpServlet {
             case "search":
                 searchName(request, response);
             default:
-
                 showList(request, response);
                 break;
         }
