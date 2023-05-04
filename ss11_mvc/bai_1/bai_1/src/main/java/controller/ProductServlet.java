@@ -32,10 +32,18 @@ public class ProductServlet extends HttpServlet {
             case "update":
                 goUpdate(request, response);
                 break;
+            case "search":
+                searchName(request, response);
             default:
+
                 showList(request, response);
                 break;
         }
+    }
+
+    private static void searchName(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        List<Product> productList = iProductService.getAll();
     }
 
     private static void goUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -99,7 +107,7 @@ public class ProductServlet extends HttpServlet {
         String producer = request.getParameter("producer");
         Product product = new Product(id, name, price, describe, producer);
         iProductService.updateProduct(id, product);
-       response.sendRedirect("/product");
+        response.sendRedirect("/product");
 
     }
 }

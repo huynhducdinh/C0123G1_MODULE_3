@@ -41,7 +41,6 @@
       <label>Mã sản phẩm</label>
       <input class="form-control" name="id" value="${id}"><br>
     </fieldset>
-
     <label>Tên sản phẩm</label>
     <input class="form-control" name="name" value="${name}"><br>
     <label>Giá sản phẩm</label>
