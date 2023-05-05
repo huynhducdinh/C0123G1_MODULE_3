@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", value = "/user")
@@ -30,7 +31,7 @@ public class UserServlet extends HttpServlet {
                 break;
             }
             case "delete": {
-                goDelete(request, response);
+                deleteUser(request, response);
                 break;
             }
             default: {
@@ -40,10 +41,14 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private static void goDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id=Integer.parseInt(request.getParameter("id"));
+    public void deleteUser(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
         iUserService.delete(id);
-        response.sendRedirect("/user");
+        try {
+            response.sendRedirect("/user");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static void goUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -55,7 +60,7 @@ public class UserServlet extends HttpServlet {
                 request.setAttribute("name",userList.get(i).getName());
                 request.setAttribute("email",userList.get(i).getEmail());
                 request.setAttribute("country",userList.get(i).getCountry());
-            request.getRequestDispatcher("/update.jsp").forward(request,response);
+                request.getRequestDispatcher("/update.jsp").forward(request,response);
             }
         }
     }

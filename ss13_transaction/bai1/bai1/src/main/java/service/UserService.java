@@ -3,7 +3,6 @@ package service;
 import model.User;
 import repository.IUserRepo;
 import repository.UserRepo;
-
 import java.util.List;
 
 public class UserService implements IUserService {
@@ -26,10 +25,11 @@ public class UserService implements IUserService {
 
     @Override
     public boolean update(int id, User user) {
-       return iUserRepo.update(id,user);
+        return iUserRepo.update(id,user);
     }
-    public void delete(int id){
-         iUserRepo.delete(id);
+    @Override
+    public boolean delete(int id) {
+        return iUserRepo.delete(id);
     }
     public List<User> search(String country) {
         return iUserRepo.search(country);

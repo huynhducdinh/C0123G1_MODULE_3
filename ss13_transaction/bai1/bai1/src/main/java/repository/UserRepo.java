@@ -23,8 +23,8 @@ public class UserRepo implements IUserRepo {
         List<User> userList = new ArrayList<>();
         Connection connection = BaseRepo.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(GET_USERS);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            CallableStatement callableStatement = connection.prepareCall(GET_USERS);
+            ResultSet resultSet = callableStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("namese");
@@ -42,16 +42,25 @@ public class UserRepo implements IUserRepo {
 
     @Override
     public boolean save(User user) {
+        System.out.println(INSERT_INTO);
+        boolean check;
         Connection connection = BaseRepo.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO);
+            connection.setAutoCommit(false);
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
-            return preparedStatement.executeLargeUpdate() > 0;
+            check= preparedStatement.executeLargeUpdate() > 0;
+            if (check){
+                connection.commit();
+            }else {
+                connection.rollback();
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return false;
     }
 
     @Override
@@ -72,16 +81,17 @@ public class UserRepo implements IUserRepo {
 
     @Override
     public boolean delete(int id) {
-        Connection connection=BaseRepo.getConnectDB();
+        Connection connection = BaseRepo.getConnectDB();
         try {
-            CallableStatement  callableStatement=connection.prepareCall(DELETE_USERS);
-            callableStatement.setInt(1,id);
-            return  callableStatement.executeUpdate()>0;
+            CallableStatement callableStatement = connection.prepareCall(DELETE_USERS);
+            callableStatement.setInt(1, id);
+            return callableStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
     }
+
 
     @Override
     public List<User> search(String country) {

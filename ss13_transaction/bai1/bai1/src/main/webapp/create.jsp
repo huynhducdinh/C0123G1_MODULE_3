@@ -34,19 +34,15 @@
 <body>
 <div id="add">
   <h2>
-    Chỉnh sửa User
+    Thêm mới User
   </h2>
-  <form method="post" class="text_left">
-    <fieldset disabled>
-      <label>ID</label>
-      <input class="form-control" name="id" value="${id}"><br>
-    </fieldset>
+  <form action="/user?action=create" method="post" class="text_left">
     <label>Tên</label>
-    <input class="form-control" name="name" value="${name}"><br>
+    <input class="form-control" name="name"><br>
     <label>Email</label>
-    <input class="form-control" name="email" value="${email}"><br>
+    <input class="form-control" name="email"><br>
     <label>Country</label>
-    <input class="form-control" name="country" value="${country}"><br>
+    <input class="form-control" name="country"><br>
     <button class="btn btn-success" type="submit">Create</button>
   </form>
 </div>
@@ -54,4 +50,4 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
-</ht
+</html>

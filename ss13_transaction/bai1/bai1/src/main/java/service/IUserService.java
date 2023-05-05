@@ -10,7 +10,7 @@ public interface IUserService {
     void saveUser(User user);
 
     boolean update(int id, User user);
-    void delete(int id);
+    boolean delete(int id);
 
     List<User> search(String country);
 
