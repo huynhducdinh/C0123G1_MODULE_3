@@ -2,7 +2,7 @@ CREATE DATABASE ung_dung_quan_ly_user;
 USE ung_dung_quan_ly_user;
 CREATE TABLE quan_ly_user(
 id INT AUTO_INCREMENT PRIMARY KEY,
-namese VARCHAR(50) NOT NULL,
+`name` VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
 country VARCHAR(50) NOT NULL
 );
@@ -19,4 +19,25 @@ SELECT *FROM quan_ly_user;
 END //
 delimiter ;
 
-CALL users();
+CALL get_users();
+
+delimiter //
+CREATE PROCEDURE update_user( IN u_id INT,IN u_name VARCHAR(50),
+IN u_email VARCHAR (50),
+IN u_country VARCHAR (50))
+BEGIN
+UPDATE quan_ly_user SET `name`=u_name,email=u_email,country=u_country WHERE id=u_id;
+END //
+delimiter ;
+
+CALL update_user(10,'dinh','hee@gmail.com','Mĩ');
+
+delimiter //
+CREATE PROCEDURE delete_user(IN u_id INT)
+BEGIN
+DELETE FROM quan_ly_user WHERE id=u_id;
+END //
+delimiter ;
+CALL delete_user(1);
+
+SELECT * FROM 

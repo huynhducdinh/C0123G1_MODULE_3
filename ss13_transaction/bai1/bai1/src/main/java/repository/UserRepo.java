@@ -7,11 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepo implements IUserRepo {
-    private final String SELECT_ALL = "SELECT * FROM quan_ly_user;";
-    private final String INSERT_INTO = "INSERT INTO quan_ly_user (namese,email,country) VALUES (?,?,?);";
-    //    private final String UPDATE = "INSERT INTO quan_ly_user (namese,email,country) VALUES (?,?,?);";
-    private static final String FIND_BY_COUNTRY = "SELECT * FROM quan_ly_user WHERE country like ?;";
-    private static final String SORT_BY_NAME = "SELECT * FROM quan_ly_user ORDER BY namese;";
+    private final String INSERT_INTO = "INSERT INTO quan_ly_user (name,email,country) VALUES (?,?,?);";
+    private static final String SORT_BY_NAME = "SELECT * FROM quan_ly_user ORDER BY name;";
     private static final String SEARCH_USERS = "SELECT * FROM quan_ly_user AS u WHERE u.country=?;";
     private static final String GET_USERS = "CALL get_users();";
     private static final String UPDATE_USERS = "CALL update_user(?,?,?,?);";
@@ -27,7 +24,7 @@ public class UserRepo implements IUserRepo {
             ResultSet resultSet = callableStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String name = resultSet.getString("namese");
+                String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
                 User user = new User(id, name, email, country);
@@ -51,7 +48,7 @@ public class UserRepo implements IUserRepo {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
-            check= preparedStatement.executeLargeUpdate() > 0;
+            check= preparedStatement.executeUpdate() > 0;
             if (check){
                 connection.commit();
             }else {
@@ -102,7 +99,7 @@ public class UserRepo implements IUserRepo {
             preparedStatement.setString(1, country);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                String name = resultSet.getString("namese");
+                String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String userCountry = resultSet.getString("country");
                 searchUsers.add(new User(name, email, userCountry));
@@ -122,7 +119,7 @@ public class UserRepo implements IUserRepo {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String name = resultSet.getString("namese");
+                String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
                 User user = new User(id, name, email, country);

@@ -14,8 +14,28 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<h1>Quản lý User</h1>
-<table class="table table-striped">
+<nav class="navbar navbar-light bg-light" style="height: 80px">
+    <div class="container-fluid">
+        <div style="display: flex; margin: 8px;position: relative">
+            <div>
+                <button class="btn" style="border: 1px solid #DDDDDD" onclick="window.location.href='/user?action=create'">Thêm mới</button>
+            </div>
+            <form action="/user?action=sort" method="post" style="margin-left: 20px">
+                <button class="btn"  style="border: 1px solid #DDDDDD" type="submit">Sắp xếp</button>
+            </form>
+
+        </div>
+        <form class="d-flex" action="/user?action=search" method="post">
+            <input type="text" name="action" value="search" hidden>
+            <input class="form-control me-2" type="search" name="phone" value="${phone}"
+                   placeholder="Search by phone number" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Search</button>
+        </form>
+
+    </div>
+</nav>
+<h1 style="text-align: center;">Quản Lý Khách Hàng</h1>
+<table class="table table-striped table- bordered" style="width: 100%">
     <thead>
     <tr>
         <th>#</th>
@@ -86,23 +106,7 @@
         </div>
     </c:forEach>
     </tbody>
-        <tr>
-            <th>
-                <button class="btn btn-primary" onclick="window.location.href='/user?action=create'">Thêm mới</button>
-            </th>
-            <th>
-                <form action="/user?action=sort" method="post">
-                    <button class="btn btn-primary" type="submit">Sắp xếp</button>
-                </form>
-            </th>
-            <th>
-                <form action="/user?action=search" method="post">
-                    <input type="text" name="action" value="search" hidden>
-                    <input type="text" name="country" value="${country}" placeholder="Search follow country">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
-                </form>
-            </th>
-        </tr>
+
 </table>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

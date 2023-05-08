@@ -6,7 +6,7 @@ import repository.UserRepo;
 import java.util.List;
 
 public class UserService implements IUserService {
-    IUserRepo iUserRepo = new UserRepo();
+  private static  IUserRepo iUserRepo = new UserRepo();
 
     @Override
     public List<User> getAll() {
@@ -31,9 +31,11 @@ public class UserService implements IUserService {
     public boolean delete(int id) {
         return iUserRepo.delete(id);
     }
+    @Override
     public List<User> search(String country) {
         return iUserRepo.search(country);
     }
+    @Override
     public List<User> sortByName() {
         return iUserRepo.sortByName();
     }
